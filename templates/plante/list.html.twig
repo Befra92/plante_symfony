@@ -1,0 +1,21 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+
+{% for plante in plante %}
+<br>
+<div class="row">
+    <div class="col-md-6"><img src="/{{plante.image }}" alt="photo" width="100"></div>
+    <div class="col-md-6">
+        <p><b>Type : </b>{{plante.type}}</p>
+        <p><b>Nom : </b>{{plante.nom}}</p>
+        <p><b>Couleur : </b>{{plante.couleur}}</p>
+         <p><b>Proprietes : </b>{{plante.propriete}}€</p>
+    </div>
+</div>
+<br>
+{# <a href="{{path('plante_show',{'id':plante.id})}}" class="btn btn-primary">Lire plus!</a> #}
+<hr>
+{% endfor %}
+
+{% endblock %}
